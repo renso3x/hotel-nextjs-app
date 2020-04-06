@@ -93,6 +93,326 @@ module.exports =
 /************************************************************************/
 /******/ ({
 
+/***/ "./components/layout/index.js":
+/*!************************************!*\
+  !*** ./components/layout/index.js ***!
+  \************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _layout__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./layout */ "./components/layout/layout.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "default", function() { return _layout__WEBPACK_IMPORTED_MODULE_0__["default"]; });
+
+
+
+/***/ }),
+
+/***/ "./components/layout/layout.js":
+/*!*************************************!*\
+  !*** ./components/layout/layout.js ***!
+  \*************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var antd_lib_layout_style_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! antd/lib/layout/style/css */ "./node_modules/antd/lib/layout/style/css.js");
+/* harmony import */ var antd_lib_layout_style_css__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(antd_lib_layout_style_css__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var antd_lib_layout__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! antd/lib/layout */ "antd/lib/layout");
+/* harmony import */ var antd_lib_layout__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(antd_lib_layout__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _navigation__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../navigation */ "./components/navigation/index.js");
+/* harmony import */ var _utils_auth__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../utils/auth */ "./utils/auth.js");
+/* harmony import */ var _styles__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./styles */ "./components/layout/styles.js");
+
+
+var _jsxFileName = "/Users/romeoenso/Desktop/refluens/refluens-hotel-reservation/hotel-app/components/layout/layout.js";
+
+var __jsx = react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement;
+
+
+
+const {
+  Content
+} = antd_lib_layout__WEBPACK_IMPORTED_MODULE_1___default.a;
+
+const BaseLayout = ({
+  children
+}) => {
+  return __jsx(antd_lib_layout__WEBPACK_IMPORTED_MODULE_1___default.a, {
+    className: "layout",
+    style: {
+      minHeight: '100vh'
+    },
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 10
+    },
+    __self: undefined
+  }, __jsx(_navigation__WEBPACK_IMPORTED_MODULE_3__["default"], {
+    logout: _utils_auth__WEBPACK_IMPORTED_MODULE_4__["logout"],
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 11
+    },
+    __self: undefined
+  }), __jsx(_styles__WEBPACK_IMPORTED_MODULE_5__["default"], {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 12
+    },
+    __self: undefined
+  }, __jsx(Content, {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 13
+    },
+    __self: undefined
+  }, __jsx("div", {
+    className: "site-layout-content",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 14
+    },
+    __self: undefined
+  }, children))));
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (Object(_utils_auth__WEBPACK_IMPORTED_MODULE_4__["withAuthSync"])(BaseLayout));
+
+/***/ }),
+
+/***/ "./components/layout/styles.js":
+/*!*************************************!*\
+  !*** ./components/layout/styles.js ***!
+  \*************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! styled-components */ "styled-components");
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(styled_components__WEBPACK_IMPORTED_MODULE_0__);
+
+const LayoutStyles = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.div.withConfig({
+  displayName: "styles__LayoutStyles",
+  componentId: "nimlol-0"
+})(["&&{padding:0 50px;.site-layout-content{background-color:#FFF;height:100vh;}}"]);
+/* harmony default export */ __webpack_exports__["default"] = (LayoutStyles);
+
+/***/ }),
+
+/***/ "./components/navigation/index.js":
+/*!****************************************!*\
+  !*** ./components/navigation/index.js ***!
+  \****************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _navigation__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./navigation */ "./components/navigation/navigation.js");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "default", function() { return _navigation__WEBPACK_IMPORTED_MODULE_0__["default"]; });
+
+
+
+/***/ }),
+
+/***/ "./components/navigation/navigation.js":
+/*!*********************************************!*\
+  !*** ./components/navigation/navigation.js ***!
+  \*********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var antd_lib_menu_style_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! antd/lib/menu/style/css */ "./node_modules/antd/lib/menu/style/css.js");
+/* harmony import */ var antd_lib_menu_style_css__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(antd_lib_menu_style_css__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var antd_lib_menu__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! antd/lib/menu */ "antd/lib/menu");
+/* harmony import */ var antd_lib_menu__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(antd_lib_menu__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var antd_lib_layout_style_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! antd/lib/layout/style/css */ "./node_modules/antd/lib/layout/style/css.js");
+/* harmony import */ var antd_lib_layout_style_css__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(antd_lib_layout_style_css__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var antd_lib_layout__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! antd/lib/layout */ "antd/lib/layout");
+/* harmony import */ var antd_lib_layout__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(antd_lib_layout__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_4__);
+
+
+
+
+var _jsxFileName = "/Users/romeoenso/Desktop/refluens/refluens-hotel-reservation/hotel-app/components/navigation/navigation.js";
+
+var __jsx = react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement;
+const {
+  Header
+} = antd_lib_layout__WEBPACK_IMPORTED_MODULE_3___default.a;
+
+const Navigation = ({
+  logout
+}) => {
+  return __jsx(Header, {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 6
+    },
+    __self: undefined
+  }, __jsx("div", {
+    className: "logo",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 7
+    },
+    __self: undefined
+  }), __jsx(antd_lib_menu__WEBPACK_IMPORTED_MODULE_1___default.a, {
+    theme: "dark",
+    mode: "horizontal",
+    defaultSelectedKeys: ['1'],
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 8
+    },
+    __self: undefined
+  }, __jsx(antd_lib_menu__WEBPACK_IMPORTED_MODULE_1___default.a.Item, {
+    key: "1",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 9
+    },
+    __self: undefined
+  }, "DASHBOARD"), __jsx(antd_lib_menu__WEBPACK_IMPORTED_MODULE_1___default.a.Item, {
+    key: "2",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 10
+    },
+    __self: undefined
+  }, "FRONT DESK"), __jsx(antd_lib_menu__WEBPACK_IMPORTED_MODULE_1___default.a.Item, {
+    key: "3",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 11
+    },
+    __self: undefined
+  }, "RESERVATION"), __jsx(antd_lib_menu__WEBPACK_IMPORTED_MODULE_1___default.a.Item, {
+    key: "4",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 12
+    },
+    __self: undefined
+  }, "RATES"), __jsx(antd_lib_menu__WEBPACK_IMPORTED_MODULE_1___default.a.Item, {
+    key: "0",
+    onClick: logout,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 13
+    },
+    __self: undefined
+  }, "Logout")));
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (Navigation);
+
+/***/ }),
+
+/***/ "./node_modules/antd/lib/layout/style/css.js":
+/*!***************************************************!*\
+  !*** ./node_modules/antd/lib/layout/style/css.js ***!
+  \***************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+__webpack_require__(/*! ../../style/index.css */ "./node_modules/antd/lib/style/index.css");
+
+__webpack_require__(/*! ./index.css */ "./node_modules/antd/lib/layout/style/index.css");
+
+/***/ }),
+
+/***/ "./node_modules/antd/lib/layout/style/index.css":
+/*!******************************************************!*\
+  !*** ./node_modules/antd/lib/layout/style/index.css ***!
+  \******************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+
+
+/***/ }),
+
+/***/ "./node_modules/antd/lib/menu/style/css.js":
+/*!*************************************************!*\
+  !*** ./node_modules/antd/lib/menu/style/css.js ***!
+  \*************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+__webpack_require__(/*! ../../style/index.css */ "./node_modules/antd/lib/style/index.css");
+
+__webpack_require__(/*! ./index.css */ "./node_modules/antd/lib/menu/style/index.css");
+
+__webpack_require__(/*! ../../tooltip/style/css */ "./node_modules/antd/lib/tooltip/style/css.js");
+
+/***/ }),
+
+/***/ "./node_modules/antd/lib/menu/style/index.css":
+/*!****************************************************!*\
+  !*** ./node_modules/antd/lib/menu/style/index.css ***!
+  \****************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+
+
+/***/ }),
+
+/***/ "./node_modules/antd/lib/style/index.css":
+/*!***********************************************!*\
+  !*** ./node_modules/antd/lib/style/index.css ***!
+  \***********************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+
+
+/***/ }),
+
+/***/ "./node_modules/antd/lib/tooltip/style/css.js":
+/*!****************************************************!*\
+  !*** ./node_modules/antd/lib/tooltip/style/css.js ***!
+  \****************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+__webpack_require__(/*! ../../style/index.css */ "./node_modules/antd/lib/style/index.css");
+
+__webpack_require__(/*! ./index.css */ "./node_modules/antd/lib/tooltip/style/index.css");
+
+/***/ }),
+
+/***/ "./node_modules/antd/lib/tooltip/style/index.css":
+/*!*******************************************************!*\
+  !*** ./node_modules/antd/lib/tooltip/style/index.css ***!
+  \*******************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+
+
+/***/ }),
+
 /***/ "./pages/index.js":
 /*!************************!*\
   !*** ./pages/index.js ***!
@@ -104,36 +424,29 @@ module.exports =
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _utils_auth__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../utils/auth */ "./utils/auth.js");
+/* harmony import */ var _components_layout__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/layout */ "./components/layout/index.js");
 var _jsxFileName = "/Users/romeoenso/Desktop/refluens/refluens-hotel-reservation/hotel-app/pages/index.js";
+
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 
-
-const Home = props => {
-  return __jsx("div", {
+const Home = () => {
+  return __jsx(_components_layout__WEBPACK_IMPORTED_MODULE_1__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 6
+      lineNumber: 5
     },
     __self: undefined
   }, __jsx("h1", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 7
+      lineNumber: 6
     },
     __self: undefined
-  }, "Welcome User!"), __jsx("button", {
-    onClick: _utils_auth__WEBPACK_IMPORTED_MODULE_1__["logout"],
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 8
-    },
-    __self: undefined
-  }, "Logout"));
+  }, "Welcome User!"));
 };
 
-/* harmony default export */ __webpack_exports__["default"] = (Object(_utils_auth__WEBPACK_IMPORTED_MODULE_1__["withAuthSync"])(Home));
+/* harmony default export */ __webpack_exports__["default"] = (Home);
 
 /***/ }),
 
@@ -254,6 +567,28 @@ module.exports = __webpack_require__(/*! /Users/romeoenso/Desktop/refluens/reflu
 
 /***/ }),
 
+/***/ "antd/lib/layout":
+/*!**********************************!*\
+  !*** external "antd/lib/layout" ***!
+  \**********************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("antd/lib/layout");
+
+/***/ }),
+
+/***/ "antd/lib/menu":
+/*!********************************!*\
+  !*** external "antd/lib/menu" ***!
+  \********************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("antd/lib/menu");
+
+/***/ }),
+
 /***/ "js-cookie":
 /*!****************************!*\
   !*** external "js-cookie" ***!
@@ -295,6 +630,17 @@ module.exports = require("next/router");
 /***/ (function(module, exports) {
 
 module.exports = require("react");
+
+/***/ }),
+
+/***/ "styled-components":
+/*!************************************!*\
+  !*** external "styled-components" ***!
+  \************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("styled-components");
 
 /***/ })
 

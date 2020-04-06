@@ -1,13 +1,11 @@
-import React from 'react'
-import { withAuthSync, logout } from '../utils/auth'
+import Layout from '../components/layout';
 
-const Home = props => {
+const Home = () => {
   return (
-    <div>
+    <Layout>
       <h1>Welcome User!</h1>
-      <button onClick={logout}>Logout</button>
-    </div>
+    </Layout>
   )
 }
 
-export default withAuthSync(Home)
+export default Home;

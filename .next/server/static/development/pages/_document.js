@@ -88,7 +88,7 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 1);
+/******/ 	return __webpack_require__(__webpack_require__.s = 2);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -1035,138 +1035,15 @@ const ESCAPE_LOOKUP={'&':'\\u0026','>':'\\u003e','<':'\\u003c','\u2028':'\\u2028
 
 /***/ }),
 
-/***/ "./node_modules/next/document.js":
+/***/ 2:
 /*!***************************************!*\
-  !*** ./node_modules/next/document.js ***!
+  !*** multi next/dist/pages/_document ***!
   \***************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! ./dist/pages/_document */ "./node_modules/next/dist/pages/_document.js")
+module.exports = __webpack_require__(/*! next/dist/pages/_document */"./node_modules/next/dist/pages/_document.js");
 
-
-/***/ }),
-
-/***/ "./pages/_document.js":
-/*!****************************!*\
-  !*** ./pages/_document.js ***!
-  \****************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return MyDocument; });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var next_document__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! next/document */ "./node_modules/next/document.js");
-/* harmony import */ var next_document__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(next_document__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var next_head__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! next/head */ "next/head");
-/* harmony import */ var next_head__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(next_head__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! styled-components */ "styled-components");
-/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(styled_components__WEBPACK_IMPORTED_MODULE_3__);
-var _jsxFileName = "/Users/romeoenso/Desktop/refluens/refluens-hotel-reservation/hotel-app/pages/_document.js";
-
-var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
-
-function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
-
-function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i] != null ? arguments[i] : {}; if (i % 2) { ownKeys(Object(source), true).forEach(function (key) { _defineProperty(target, key, source[key]); }); } else if (Object.getOwnPropertyDescriptors) { Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)); } else { ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } } return target; }
-
-function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
-
-function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
-
-
- // Import styled components ServerStyleSheet
-
-
-class MyDocument extends next_document__WEBPACK_IMPORTED_MODULE_1___default.a {
-  static getInitialProps({
-    renderPage
-  }) {
-    // Step 1: Create an instance of ServerStyleSheet
-    const sheet = new styled_components__WEBPACK_IMPORTED_MODULE_3__["ServerStyleSheet"](); // Step 2: Retrieve styles from components in the page
-
-    const page = renderPage(App => props => sheet.collectStyles(__jsx(App, _extends({}, props, {
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 13
-      },
-      __self: this
-    })))); // Step 3: Extract the styles as <style> tags
-
-    const styleTags = sheet.getStyleElement(); // Step 4: Pass styleTags as a prop
-
-    return _objectSpread({}, page, {
-      styleTags
-    });
-  }
-
-  render() {
-    return __jsx("html", {
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 25
-      },
-      __self: this
-    }, __jsx(next_head__WEBPACK_IMPORTED_MODULE_2___default.a, {
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 26
-      },
-      __self: this
-    }, __jsx("title", {
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 27
-      },
-      __self: this
-    }, "My page"), this.props.styleTags), __jsx("body", {
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 31
-      },
-      __self: this
-    }, __jsx(next_document__WEBPACK_IMPORTED_MODULE_1__["Main"], {
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 32
-      },
-      __self: this
-    }), __jsx(next_document__WEBPACK_IMPORTED_MODULE_1__["NextScript"], {
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 33
-      },
-      __self: this
-    })));
-  }
-
-}
-
-/***/ }),
-
-/***/ 1:
-/*!*********************************************!*\
-  !*** multi private-next-pages/_document.js ***!
-  \*********************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__(/*! private-next-pages/_document.js */"./pages/_document.js");
-
-
-/***/ }),
-
-/***/ "next/head":
-/*!****************************!*\
-  !*** external "next/head" ***!
-  \****************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = require("next/head");
 
 /***/ }),
 
@@ -1189,17 +1066,6 @@ module.exports = require("prop-types");
 /***/ (function(module, exports) {
 
 module.exports = require("react");
-
-/***/ }),
-
-/***/ "styled-components":
-/*!************************************!*\
-  !*** external "styled-components" ***!
-  \************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = require("styled-components");
 
 /***/ }),
 
