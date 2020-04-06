@@ -2,11 +2,13 @@ import styled from 'styled-components';
 
 const LayoutStyles = styled.div`
   && {
-    padding: 0 50px;
+    .main__content {
+      min-height: 1842px;
+      margin: 24px;
+    }
 
-    .site-layout-content {
-      background-color: #FFF;
-      height: 100vh;
+    .site-layout {
+      margin-top: 100px;
     }
   }
 `;

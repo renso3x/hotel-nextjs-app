@@ -93,6 +93,73 @@ module.exports =
 /************************************************************************/
 /******/ ({
 
+/***/ "./components/content-card/index.js":
+/*!******************************************!*\
+  !*** ./components/content-card/index.js ***!
+  \******************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var antd_lib_card_style_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! antd/lib/card/style/css */ "./node_modules/antd/lib/card/style/css.js");
+/* harmony import */ var antd_lib_card_style_css__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(antd_lib_card_style_css__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var antd_lib_card__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! antd/lib/card */ "antd/lib/card");
+/* harmony import */ var antd_lib_card__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(antd_lib_card__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var antd_lib_typography_style_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! antd/lib/typography/style/css */ "./node_modules/antd/lib/typography/style/css.js");
+/* harmony import */ var antd_lib_typography_style_css__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(antd_lib_typography_style_css__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var antd_lib_typography__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! antd/lib/typography */ "antd/lib/typography");
+/* harmony import */ var antd_lib_typography__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(antd_lib_typography__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! prop-types */ "prop-types");
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_5__);
+
+
+
+
+var _jsxFileName = "/Users/romeoenso/Desktop/refluens/refluens-hotel-reservation/hotel-app/components/content-card/index.js";
+
+var __jsx = react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement;
+
+const {
+  Title
+} = antd_lib_typography__WEBPACK_IMPORTED_MODULE_3___default.a;
+
+const ContentCard = ({
+  heading,
+  value
+}) => {
+  return __jsx(antd_lib_card__WEBPACK_IMPORTED_MODULE_1___default.a, {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 8
+    },
+    __self: undefined
+  }, __jsx("span", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 9
+    },
+    __self: undefined
+  }, heading), __jsx(Title, {
+    level: 3,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 10
+    },
+    __self: undefined
+  }, value));
+};
+
+ContentCard.propTypes = {
+  heading: prop_types__WEBPACK_IMPORTED_MODULE_5___default.a.string.isRequired,
+  value: prop_types__WEBPACK_IMPORTED_MODULE_5___default.a.string.isRequired
+};
+/* harmony default export */ __webpack_exports__["default"] = (ContentCard);
+
+/***/ }),
+
 /***/ "./components/layout/index.js":
 /*!************************************!*\
   !*** ./components/layout/index.js ***!
@@ -166,13 +233,14 @@ const BaseLayout = ({
     },
     __self: undefined
   }, __jsx(Content, {
+    className: "site-layout",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 13
     },
     __self: undefined
   }, __jsx("div", {
-    className: "site-layout-content",
+    className: "main__content",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 14
@@ -200,7 +268,7 @@ __webpack_require__.r(__webpack_exports__);
 const LayoutStyles = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.div.withConfig({
   displayName: "styles__LayoutStyles",
   componentId: "nimlol-0"
-})(["&&{padding:0 50px;.site-layout-content{background-color:#FFF;height:100vh;}}"]);
+})(["&&{.main__content{min-height:1842px;margin:24px;}.site-layout{margin-top:100px;}}"]);
 /* harmony default export */ __webpack_exports__["default"] = (LayoutStyles);
 
 /***/ }),
@@ -240,6 +308,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var antd_lib_layout__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(antd_lib_layout__WEBPACK_IMPORTED_MODULE_3__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _ant_design_icons__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @ant-design/icons */ "@ant-design/icons");
+/* harmony import */ var _ant_design_icons__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_ant_design_icons__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _styles__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./styles */ "./components/navigation/styles.js");
 
 
 
@@ -247,75 +318,257 @@ __webpack_require__.r(__webpack_exports__);
 var _jsxFileName = "/Users/romeoenso/Desktop/refluens/refluens-hotel-reservation/hotel-app/components/navigation/navigation.js";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement;
+
+
 const {
   Header
 } = antd_lib_layout__WEBPACK_IMPORTED_MODULE_3___default.a;
+const {
+  SubMenu
+} = antd_lib_menu__WEBPACK_IMPORTED_MODULE_1___default.a;
 
 const Navigation = ({
   logout
 }) => {
-  return __jsx(Header, {
+  return __jsx(_styles__WEBPACK_IMPORTED_MODULE_6__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 6
+      lineNumber: 10
     },
     __self: undefined
-  }, __jsx("div", {
-    className: "logo",
+  }, __jsx(Header, {
+    style: {
+      position: 'fixed',
+      zIndex: 1,
+      width: '100%'
+    },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 7
+      lineNumber: 11
     },
     __self: undefined
-  }), __jsx(antd_lib_menu__WEBPACK_IMPORTED_MODULE_1___default.a, {
-    theme: "dark",
+  }, __jsx(antd_lib_menu__WEBPACK_IMPORTED_MODULE_1___default.a, {
     mode: "horizontal",
     defaultSelectedKeys: ['1'],
+    theme: "light",
+    className: "main-menu",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 8
+      lineNumber: 12
     },
     __self: undefined
   }, __jsx(antd_lib_menu__WEBPACK_IMPORTED_MODULE_1___default.a.Item, {
     key: "1",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 9
+      lineNumber: 13
     },
     __self: undefined
   }, "DASHBOARD"), __jsx(antd_lib_menu__WEBPACK_IMPORTED_MODULE_1___default.a.Item, {
-    key: "2",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 10
-    },
-    __self: undefined
-  }, "FRONT DESK"), __jsx(antd_lib_menu__WEBPACK_IMPORTED_MODULE_1___default.a.Item, {
     key: "3",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 11
+      lineNumber: 14
     },
     __self: undefined
   }, "RESERVATION"), __jsx(antd_lib_menu__WEBPACK_IMPORTED_MODULE_1___default.a.Item, {
     key: "4",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 12
+      lineNumber: 15
     },
     __self: undefined
-  }, "RATES"), __jsx(antd_lib_menu__WEBPACK_IMPORTED_MODULE_1___default.a.Item, {
-    key: "0",
+  }, "RATES"), __jsx(SubMenu, {
+    key: "sub2",
+    title: __jsx("span", {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 20
+      },
+      __self: undefined
+    }, __jsx(_ant_design_icons__WEBPACK_IMPORTED_MODULE_5__["SettingOutlined"], {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 21
+      },
+      __self: undefined
+    })),
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 17
+    },
+    __self: undefined
+  }, __jsx(antd_lib_menu__WEBPACK_IMPORTED_MODULE_1___default.a.Item, {
+    key: "9",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 25
+    },
+    __self: undefined
+  }, "Account"), __jsx(antd_lib_menu__WEBPACK_IMPORTED_MODULE_1___default.a.Item, {
+    key: "10",
     onClick: logout,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 13
+      lineNumber: 26
     },
     __self: undefined
-  }, "Logout")));
+  }, "Logout")))));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Navigation);
+
+/***/ }),
+
+/***/ "./components/navigation/styles.js":
+/*!*****************************************!*\
+  !*** ./components/navigation/styles.js ***!
+  \*****************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! styled-components */ "styled-components");
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(styled_components__WEBPACK_IMPORTED_MODULE_0__);
+
+const NavigationStyle = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.div.withConfig({
+  displayName: "styles__NavigationStyle",
+  componentId: "ykoape-0"
+})(["&&{.ant-layout-header{padding:0;display:flex;box-shadow:0 3px 6px -4px rgba(0,0,0,.12),0 6px 16px 0 rgba(0,0,0,.08),0 9px 28px 8px rgba(0,0,0,.05);transition:background .3s,width .2s;}.ant-menu{position:relative;width:100%;height:64px;padding-left:24px;display:flex;}}"]);
+/* harmony default export */ __webpack_exports__["default"] = (NavigationStyle);
+
+/***/ }),
+
+/***/ "./node_modules/antd/lib/button/style/css.js":
+/*!***************************************************!*\
+  !*** ./node_modules/antd/lib/button/style/css.js ***!
+  \***************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+__webpack_require__(/*! ../../style/index.css */ "./node_modules/antd/lib/style/index.css");
+
+__webpack_require__(/*! ./index.css */ "./node_modules/antd/lib/button/style/index.css");
+
+/***/ }),
+
+/***/ "./node_modules/antd/lib/button/style/index.css":
+/*!******************************************************!*\
+  !*** ./node_modules/antd/lib/button/style/index.css ***!
+  \******************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+
+
+/***/ }),
+
+/***/ "./node_modules/antd/lib/card/style/css.js":
+/*!*************************************************!*\
+  !*** ./node_modules/antd/lib/card/style/css.js ***!
+  \*************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+__webpack_require__(/*! ../../style/index.css */ "./node_modules/antd/lib/style/index.css");
+
+__webpack_require__(/*! ./index.css */ "./node_modules/antd/lib/card/style/index.css");
+
+__webpack_require__(/*! ../../tabs/style/css */ "./node_modules/antd/lib/tabs/style/css.js");
+
+__webpack_require__(/*! ../../row/style/css */ "./node_modules/antd/lib/row/style/css.js");
+
+__webpack_require__(/*! ../../col/style/css */ "./node_modules/antd/lib/col/style/css.js");
+
+/***/ }),
+
+/***/ "./node_modules/antd/lib/card/style/index.css":
+/*!****************************************************!*\
+  !*** ./node_modules/antd/lib/card/style/index.css ***!
+  \****************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+
+
+/***/ }),
+
+/***/ "./node_modules/antd/lib/col/style/css.js":
+/*!************************************************!*\
+  !*** ./node_modules/antd/lib/col/style/css.js ***!
+  \************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+__webpack_require__(/*! ../../style/index.css */ "./node_modules/antd/lib/style/index.css");
+
+__webpack_require__(/*! ../../grid/style/css */ "./node_modules/antd/lib/grid/style/css.js");
+
+/***/ }),
+
+/***/ "./node_modules/antd/lib/grid/style/css.js":
+/*!*************************************************!*\
+  !*** ./node_modules/antd/lib/grid/style/css.js ***!
+  \*************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+__webpack_require__(/*! ../../style/index.css */ "./node_modules/antd/lib/style/index.css");
+
+__webpack_require__(/*! ./index.css */ "./node_modules/antd/lib/grid/style/index.css");
+
+/***/ }),
+
+/***/ "./node_modules/antd/lib/grid/style/index.css":
+/*!****************************************************!*\
+  !*** ./node_modules/antd/lib/grid/style/index.css ***!
+  \****************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+
+
+/***/ }),
+
+/***/ "./node_modules/antd/lib/input/style/css.js":
+/*!**************************************************!*\
+  !*** ./node_modules/antd/lib/input/style/css.js ***!
+  \**************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+__webpack_require__(/*! ../../style/index.css */ "./node_modules/antd/lib/style/index.css");
+
+__webpack_require__(/*! ./index.css */ "./node_modules/antd/lib/input/style/index.css");
+
+__webpack_require__(/*! ../../button/style/css */ "./node_modules/antd/lib/button/style/css.js");
+
+/***/ }),
+
+/***/ "./node_modules/antd/lib/input/style/index.css":
+/*!*****************************************************!*\
+  !*** ./node_modules/antd/lib/input/style/index.css ***!
+  \*****************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+
 
 /***/ }),
 
@@ -375,10 +628,53 @@ __webpack_require__(/*! ../../tooltip/style/css */ "./node_modules/antd/lib/tool
 
 /***/ }),
 
+/***/ "./node_modules/antd/lib/row/style/css.js":
+/*!************************************************!*\
+  !*** ./node_modules/antd/lib/row/style/css.js ***!
+  \************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+__webpack_require__(/*! ../../style/index.css */ "./node_modules/antd/lib/style/index.css");
+
+__webpack_require__(/*! ../../grid/style/css */ "./node_modules/antd/lib/grid/style/css.js");
+
+/***/ }),
+
 /***/ "./node_modules/antd/lib/style/index.css":
 /*!***********************************************!*\
   !*** ./node_modules/antd/lib/style/index.css ***!
   \***********************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+
+
+/***/ }),
+
+/***/ "./node_modules/antd/lib/tabs/style/css.js":
+/*!*************************************************!*\
+  !*** ./node_modules/antd/lib/tabs/style/css.js ***!
+  \*************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+__webpack_require__(/*! ../../style/index.css */ "./node_modules/antd/lib/style/index.css");
+
+__webpack_require__(/*! ./index.css */ "./node_modules/antd/lib/tabs/style/index.css");
+
+/***/ }),
+
+/***/ "./node_modules/antd/lib/tabs/style/index.css":
+/*!****************************************************!*\
+  !*** ./node_modules/antd/lib/tabs/style/index.css ***!
+  \****************************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
@@ -413,6 +709,37 @@ __webpack_require__(/*! ./index.css */ "./node_modules/antd/lib/tooltip/style/in
 
 /***/ }),
 
+/***/ "./node_modules/antd/lib/typography/style/css.js":
+/*!*******************************************************!*\
+  !*** ./node_modules/antd/lib/typography/style/css.js ***!
+  \*******************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+__webpack_require__(/*! ../../style/index.css */ "./node_modules/antd/lib/style/index.css");
+
+__webpack_require__(/*! ./index.css */ "./node_modules/antd/lib/typography/style/index.css");
+
+__webpack_require__(/*! ../../tooltip/style/css */ "./node_modules/antd/lib/tooltip/style/css.js");
+
+__webpack_require__(/*! ../../input/style/css */ "./node_modules/antd/lib/input/style/css.js");
+
+/***/ }),
+
+/***/ "./node_modules/antd/lib/typography/style/index.css":
+/*!**********************************************************!*\
+  !*** ./node_modules/antd/lib/typography/style/index.css ***!
+  \**********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+
+
+/***/ }),
+
 /***/ "./pages/index.js":
 /*!************************!*\
   !*** ./pages/index.js ***!
@@ -422,25 +749,91 @@ __webpack_require__(/*! ./index.css */ "./node_modules/antd/lib/tooltip/style/in
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _components_layout__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/layout */ "./components/layout/index.js");
+/* harmony import */ var antd_lib_row_style_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! antd/lib/row/style/css */ "./node_modules/antd/lib/row/style/css.js");
+/* harmony import */ var antd_lib_row_style_css__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(antd_lib_row_style_css__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var antd_lib_row__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! antd/lib/row */ "antd/lib/row");
+/* harmony import */ var antd_lib_row__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(antd_lib_row__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var antd_lib_col_style_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! antd/lib/col/style/css */ "./node_modules/antd/lib/col/style/css.js");
+/* harmony import */ var antd_lib_col_style_css__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(antd_lib_col_style_css__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var antd_lib_col__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! antd/lib/col */ "antd/lib/col");
+/* harmony import */ var antd_lib_col__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(antd_lib_col__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _components_layout__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../components/layout */ "./components/layout/index.js");
+/* harmony import */ var _components_content_card__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../components/content-card */ "./components/content-card/index.js");
+
+
+
+
 var _jsxFileName = "/Users/romeoenso/Desktop/refluens/refluens-hotel-reservation/hotel-app/pages/index.js";
 
-var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+var __jsx = react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement;
+
 
 
 const Home = () => {
-  return __jsx(_components_layout__WEBPACK_IMPORTED_MODULE_1__["default"], {
+  return __jsx(_components_layout__WEBPACK_IMPORTED_MODULE_5__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 5
+      lineNumber: 8
     },
     __self: undefined
-  }, __jsx("h1", {
+  }, __jsx(antd_lib_row__WEBPACK_IMPORTED_MODULE_1___default.a, {
+    gutter: 16,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 6
+      lineNumber: 9
+    },
+    __self: undefined
+  }, __jsx(antd_lib_col__WEBPACK_IMPORTED_MODULE_3___default.a, {
+    span: 8,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 10
+    },
+    __self: undefined
+  }, __jsx(_components_content_card__WEBPACK_IMPORTED_MODULE_6__["default"], {
+    heading: "RESERVATIONS",
+    value: "30",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 11
+    },
+    __self: undefined
+  })), __jsx(antd_lib_col__WEBPACK_IMPORTED_MODULE_3___default.a, {
+    span: 8,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 13
+    },
+    __self: undefined
+  }, __jsx(_components_content_card__WEBPACK_IMPORTED_MODULE_6__["default"], {
+    heading: "OCCUPIED",
+    value: "20%",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 14
+    },
+    __self: undefined
+  })), __jsx(antd_lib_col__WEBPACK_IMPORTED_MODULE_3___default.a, {
+    span: 8,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 16
+    },
+    __self: undefined
+  }, __jsx(_components_content_card__WEBPACK_IMPORTED_MODULE_6__["default"], {
+    heading: "TOTAL",
+    value: "PHP 12,345",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 17
+    },
+    __self: undefined
+  }))), __jsx("h1", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 20
     },
     __self: undefined
   }, "Welcome User!"));
@@ -567,6 +960,39 @@ module.exports = __webpack_require__(/*! /Users/romeoenso/Desktop/refluens/reflu
 
 /***/ }),
 
+/***/ "@ant-design/icons":
+/*!************************************!*\
+  !*** external "@ant-design/icons" ***!
+  \************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("@ant-design/icons");
+
+/***/ }),
+
+/***/ "antd/lib/card":
+/*!********************************!*\
+  !*** external "antd/lib/card" ***!
+  \********************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("antd/lib/card");
+
+/***/ }),
+
+/***/ "antd/lib/col":
+/*!*******************************!*\
+  !*** external "antd/lib/col" ***!
+  \*******************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("antd/lib/col");
+
+/***/ }),
+
 /***/ "antd/lib/layout":
 /*!**********************************!*\
   !*** external "antd/lib/layout" ***!
@@ -586,6 +1012,28 @@ module.exports = require("antd/lib/layout");
 /***/ (function(module, exports) {
 
 module.exports = require("antd/lib/menu");
+
+/***/ }),
+
+/***/ "antd/lib/row":
+/*!*******************************!*\
+  !*** external "antd/lib/row" ***!
+  \*******************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("antd/lib/row");
+
+/***/ }),
+
+/***/ "antd/lib/typography":
+/*!**************************************!*\
+  !*** external "antd/lib/typography" ***!
+  \**************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("antd/lib/typography");
 
 /***/ }),
 
@@ -619,6 +1067,17 @@ module.exports = require("next-cookies");
 /***/ (function(module, exports) {
 
 module.exports = require("next/router");
+
+/***/ }),
+
+/***/ "prop-types":
+/*!*****************************!*\
+  !*** external "prop-types" ***!
+  \*****************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("prop-types");
 
 /***/ }),
 

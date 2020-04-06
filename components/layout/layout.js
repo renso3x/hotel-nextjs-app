@@ -10,8 +10,10 @@ const BaseLayout = ({ children  }) => {
     <Layout className="layout" style={{ minHeight: '100vh' }}>
       <Navigation logout={logout} />
       <StyledLayout>
-        <Content>
-          <div className="site-layout-content">{children}</div>
+        <Content className="site-layout">
+          <div className="main__content">
+            {children}
+          </div>
         </Content>
       </StyledLayout>
     </Layout>
